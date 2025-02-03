@@ -241,6 +241,43 @@ img {
   width: 200px;
   border-radius: 0.5rem;
 }
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
 
 /* ===== SKILLS =====*/
 .skills__container {
@@ -297,18 +334,72 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+.skills__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.skills__box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+}
+
+.skills__subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skills__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.skills__item::before {
+  content: "✔";
+  color: black;
+  font-weight: bold;
+}
+
 
 /* ===== WORK =====*/
 .work__container {
   row-gap: 5rem;
 }
 .work__img {
-  box-shadow: 0px 4px 50px rgba(14, 36, 49, 0.15);
+  box-shadow: 0px 4px 30px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
+  width: 100%;
+  height: 200px; /* Adjust based on your design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .work__img img {
-  transition: 1s;
+  .work__img img {
+    width: 100%;  /* Ensures images take full container width */
+    height: 100px; /* Adjust this as needed to maintain aspect ratio */
+    object-fit: cover; /* Ensures images fill the area without distortion */
+    transition: 1s;
+   
+  }
 }
 .work__img img:hover {
   transform: scale(1.1);
@@ -337,7 +428,7 @@ img {
 /* ===== FOOTER =====*/
 .footer {
   background-color: var(--second-color);
-  color: #fff;
+  color:#e7d7c9;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -475,4 +566,31 @@ img {
   .home__img {
     width: 450px;
   }
+}
+.experience__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience__data {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience__subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.experience__company {
+  font-style: italic;
+  color: #666;
+}
+
+.experience__text {
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
